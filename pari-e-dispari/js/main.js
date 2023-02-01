@@ -14,7 +14,13 @@ function randomNumber(num1, num2) {
 }
 
 // Creo una variabile dove inserire il numero per l'utente
-const userNumber = parseInt(prompt('Inserisci un numero da 1 a 5'));
+let userNumber = parseInt(prompt('Inserisci un numero da 1 a 5'));
+
+// Verifico che il numero inserito rispetti i parametri
+while (userNumber > 5 || userNumber < 1) {
+    userNumber = parseInt(prompt('Valore non valido. Reinserisci un numero da 1 a 5'));
+}
+
 console.log('Numero utente: ' + userNumber);
 
 // Creo una variabile dove inserire la funzione per il computer
