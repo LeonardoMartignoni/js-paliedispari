@@ -5,7 +5,12 @@
 // Dichiariamo chi ha vinto.
 
 // Chiedo all'utente se sceglie pari o dispari
-const userChoice = prompt('Pari o dispari?');
+let userChoice = prompt('Pari o dispari?');
+
+// Verifico che l'utente abbia inserito i parametri corretti
+while (userChoice != 'pari' && userChoice != 'dispari') {
+    userChoice = prompt('Parametro non corretto. Pari o dispari?');
+}
 
 // Creo una funziona per generare un numero random da 1 a 5
 function randomNumber(num1, num2) {
@@ -17,7 +22,7 @@ function randomNumber(num1, num2) {
 let userNumber = parseInt(prompt('Inserisci un numero da 1 a 5'));
 
 // Verifico che il numero inserito rispetti i parametri
-while (userNumber > 5 || userNumber < 1) {
+while (userNumber > 5 || userNumber < 1 || isNaN(userNumber)) {
     userNumber = parseInt(prompt('Valore non valido. Reinserisci un numero da 1 a 5'));
 }
 
