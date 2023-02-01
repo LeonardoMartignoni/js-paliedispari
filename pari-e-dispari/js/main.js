@@ -14,8 +14,8 @@ function randomNumber(num1, num2) {
 }
 
 // Creo una variabile dove inserire il numero per l'utente
-const userNumber = randomNumber(1, 5);
-console.log('Numero user: ' + userNumber);
+const userNumber = parseInt(prompt('Inserisci un numero da 1 a 5'));
+console.log('Numero utente: ' + userNumber);
 
 // Creo una variabile dove inserire la funzione per il computer
 const botNumber = randomNumber(1, 5);
